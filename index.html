@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> //imports a-frame library - imp to make the browse env a 360 env
+  </head>
+  <body>
+    <a-scene> //always include a-scene - this sets up the scene
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+<!--       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>//this is where the obj lay -->
+      <a-sky src="https://cdn.glitch.global/c78f8b0e-90ab-4582-816b-a57307e7aaee/kris-guico-rsB-he-ye7w-unsplash.jpg?v=1678837283173"></a-sky> // color of the sphere of influence (lol)
+      <a-sound src="https://cdn.glitch.global/c78f8b0e-90ab-4582-816b-a57307e7aaee/553235__nachtmahrtv__seagulls.wav?v=1678838331330" autoplay="true" position="0 5 5"></a-sound>
+    </a-scene>
+  </body>
+</html>
+
+//position: x,y,z - dealing with 3D : x + = to the right 
+//                                    x - = to the left
+//                                    y + = up 
+//                                    y - = down
+//                                    z + = toward me 
+//                                    z - = away from me
+
+//presence: need to know you're present in the scence - 1. environment 2. sound 3. light
