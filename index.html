@@ -4,40 +4,30 @@
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> //imports a-frame library - imp to make the
     browse env a 360 env
-<title>Rachel's a-frame 360 Class Sample</title>
+    <title>Rachel's a-frame 360 Class Sample</title>
 </head>
 
 <body>
     <a-scene> //always include a-scene - this sets up the scene
         <a-assets>
-            <a-asset-item id="beachBall" src="assets/models/scene.gltf"></a-item>
-            <audio preload="auto" id="seagullSound" src="assets/audio/seagulls.wav"></audio>
-            <img id="ocean" alt="360 image of beach" src="assets/images/beach.jpg">
+            <a-asset-item id="beachBall" src="assets/models/beach_ball/scene.gltf"></a-item>
+                <a-asset-item id="beachUmbrella" src="assets/models/beach_umbrella/scene.gltf"></a-item>
+                    <a-asset-item id="sandCastle" src="assets/models/low_poly_sand_castle/scene.gltf"></a-item>
+                        <audio preload="auto" id="seagullSound" src="assets/audio/seagulls.wav"></audio>
+                        <img id="ocean" alt="360 image of beach" src="assets/images/beach.jpg">
         </a-assets>
-
-    <!--      
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>//this is where the obj lay -->
 
         <a-sound src="#seagullSound" loop="true" autoplay="true"></a-sound>
         <a-sky src="#ocean"></a-sky> // color of the sphere of influence (lol)
-        <a-entity gltf-model="#beachBall" ></a-entity>
+        <a-entity gltf-model="#beachBall" rotation=" 160 " scale="0.02 0.02 0.02" position="-2 0 5"></a-entity>
+        <a-entity gltf-model="#beachUmbrella" rotation="" scale="0.003 0.003 0.003" position="-3 0 5"></a-entity>
+        <a-entity gltf-model="#sandCastle" rotation="" scale="0.05 0.05 0.05" position="-4 0 5"></a-entity>
         <a-camera>
             <a-cursor>
-        
+
             </a-cursor>
         </a-camera>
     </a-scene>
 </body>
 
 </html>
-
-<!-- 
-// position: x,y,z - dealing with 3D : x + = to the right
-// x - = to the left
-// y + = up
-// y - = down
-// z + = toward me
-// z - = away from me -->
